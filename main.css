@@ -1,0 +1,64 @@
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: sans-serif;
+  height: 100%;
+}
+.container {
+  margin: 10%;
+  position: relative;
+  animation: fadeIn 1.5s ease-out
+  
+}
+
+.answer {
+  animation: fadeIn 1.5s ease-out
+}
+
+#clickMe {
+    padding: 15px;;
+    margin: 0 0 15px 0px;
+    display: inline-block;
+    background-color: red;
+    
+}
+
+#clickMe:hover {
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+hr {
+  border-width: 2px;
+  width: 5%;
+  /* display: inline-block; */
+  text-align: left;
+}
+.line {
+  height: o;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-bottom: solid whitesmoke 4px;
+  width: 100%;
+  /* position: absolute; */
+  left: 0;
+  animation: lineStretch 2s ease-out
+}
+
+@keyframes lineStretch {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
