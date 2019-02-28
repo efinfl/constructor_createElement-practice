@@ -3,12 +3,18 @@ body {
   color: whitesmoke;
   font-family: sans-serif;
   height: 100%;
+
 }
 .container {
   margin: 10%;
   position: relative;
   animation: fadeIn 1.5s ease-out
   
+}
+
+.formWidget {
+  margin: 0 8px 18px 0;
+  display: inline-block;
 }
 
 .answer {
