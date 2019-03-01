@@ -37,10 +37,10 @@ document.getElementById("clickMe").onclick = function giveAnswer() {
   // The method can be passed directly into displayAnswer() as a parameter to display the output
   // But first check to make sure the form was filled out...
   if (
-    newUser.kind !== "KIND OF BIKE" &&
-    newUser.size !== "BIKE SIZE" &&
-    newUser.color !== "BIKE COLOR" &&
-    newUser.user !== "YOUR NAME"
+    newUser.kind !== "" &&
+    newUser.size !== "" &&
+    newUser.color !== "" &&
+    newUser.user !== ""
   ) {
     // if true, then run the methods, else display a message.
     displayAnswer(newUser.ride());

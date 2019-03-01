@@ -6,12 +6,19 @@ body {
 
 }
 .container {
-  margin: 10%;
+  margin: 5% auto 0 auto;
+  width: 60%;
   position: relative;
   animation: fadeIn 1.5s ease-out
   
 }
+#intro {
+  font-weight: normal;
+  line-height: 1.5;
+  color: grey;
+  margin-bottom: 32px;
 
+}
 .formWidget {
   margin: 0 8px 18px 0;
   display: inline-block;

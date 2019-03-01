@@ -9,22 +9,28 @@
   </head>
   <body>
     <div class="container">
+      <h2 id="intro">
+        This is just a small project I did for myself. It's an exercise in taking
+        data from a form, passing it through a constructor function and
+        dynamically displaying the results to the DOM. It's not much, but I had
+        fund doing it.
+      </h2>
       <form>
         <div class="formWidget">
+          <input type="text" id="name" value="" placeholder="YOUR NAME"/><br>
           <label for="name"></label>
-          <input type="text" id="name" value="YOUR NAME" />
         </div>
         <div class="formWidget">
           <label for="kind"></label>
-          <input type="text" id="kind" value="KIND OF BIKE" />
+          <input type="text" id="kind" value="" placeholder="KIND OF BIKE" />
         </div>
         <div class="formWidget">
           <label for="size"></label>
-          <input type="text" id="size" value="BIKE SIZE" />
+          <input type="text" id="size" value="" placeholder="BIKE SIZE" />
         </div>
         <div class="formWidget">
           <label for="color"></label>
-          <input type="text" id="color" value="BIKE COLOR" />
+          <input type="text" id="color" value="" placeholder="BIKE COLOR"/>
         </div>
         <h1 value="submit" id="clickMe">What Kind of Bike Do You Ride?</h1>
       </form>
