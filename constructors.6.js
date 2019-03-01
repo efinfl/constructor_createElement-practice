@@ -10,9 +10,7 @@ function Bike(kind, size, color, user) {
 // Below, methods have been wrapped in a function so that they can be called when "clickMe" element is clicked.
 
 document.getElementById("clickMe").onclick = function giveAnswer() {
-  
   rmvAnswer();
-  
   // This gets the value of each
   let nameInput = document.getElementById("name").value;
   let kindInput = document.getElementById("kind").value;
@@ -60,15 +58,16 @@ function displayAnswer(txt) {
   let answerContainer = document.getElementsByClassName("answerContainer")[0];
   answerContainer.append(newH2);
 }
-
+// This function finds elements with the selector of class
 const rmvAnswer = () => {
-  let parentDiv = document.getElementById("anCont").getElementsByTagName("h2");
+  let parentDiv = document.querySelectorAll(".answerContainer");
   let rmvAnswer = document.querySelector(".answer");
-  let parentDivLen = parentDiv.length;
-  for (let i = 0; i < parentDivLen; i++) {
-    if (parentDiv[i] !== null) {
-      console.log("I found some answer elements");
-      parentDiv[i].parentNode.removeChild(parentDiv[i]);
-    } else console.log("I found no answer elements");
-  }
+  console.log(parentDiv);
+  if (rmvAnswer !== null) {
+    console.log("I found some answer elements");
+    let len = parentDiv.forEach(element => {
+      rmvAnswer.parentNode.removeChild(rmvAnswer)
+    });
+    console.log("len: " + len)
+  } else console.log("I found no answer elements");
 };
