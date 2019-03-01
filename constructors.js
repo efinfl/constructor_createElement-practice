@@ -1,4 +1,4 @@
-// Below is a constructor function. Constructor function only serve to structure data that gets passed into it.
+// Below is a constructor function. Constructor functions only serve to structure data that gets passed into it.
 function Bike(kind, size, color, user) {
   this.kind = kind;
   this.size = size;
@@ -32,8 +32,7 @@ document.getElementById("clickMe").onclick = function giveAnswer() {
       this.color
     }`;
   };
-
-  // You can now take the data form the variable(newUser) and run any method on it that you've created (ride, red)
+  // You can now take the data form the variable(newUser) and run any constructor method on it that you've created (ride, red)
   // The method can be passed directly into displayAnswer() as a parameter to display the output
   // But first check to make sure the form was filled out...
   if (
@@ -42,7 +41,7 @@ document.getElementById("clickMe").onclick = function giveAnswer() {
     newUser.color !== "" &&
     newUser.user !== ""
   ) {
-    // if true, then run the methods, else display a message.
+    // if true, then run the method as parameters in the displayAnswer function, else display a message.
     displayAnswer(newUser.ride());
     displayAnswer(newUser.red());
   } else
