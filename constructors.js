@@ -10,9 +10,9 @@ function Bike(kind, size, color, user) {
 // Below, methods have been wrapped in a function so that they can be called when "clickMe" element is clicked.
 
 document.getElementById("clickMe").onclick = function giveAnswer() {
-  
+  // Calls function to clear answers
   rmvAnswer();
-  
+
   // This gets the value of each
   let nameInput = document.getElementById("name").value;
   let kindInput = document.getElementById("kind").value;
@@ -54,21 +54,26 @@ document.getElementById("clickMe").onclick = function giveAnswer() {
 // function to dynamically add element and display giveAnswer() methods to the DOM
 function displayAnswer(txt) {
   let t = txt;
+
+  let anCont = document.createElement("div");
+  anCont.className = "answerContainer";
+  anCont.id = "anCont";
+
+  document.getElementsByClassName("container")[0].append(anCont);
+
   let newH2 = document.createElement("h2");
   newH2.className = "answer";
   newH2.innerHTML = t;
-  let answerContainer = document.getElementsByClassName("answerContainer")[0];
-  answerContainer.append(newH2);
-}
 
+  document.getElementsByClassName("answerContainer")[0].append(newH2);
+}
+// This function checks for an answers container and removes it if it exists
+// so that it won't duplicate when the "clickMe" is clicked
 const rmvAnswer = () => {
-  let parentDiv = document.getElementById("anCont").getElementsByTagName("h2");
-  let rmvAnswer = document.querySelector(".answer");
-  let parentDivLen = parentDiv.length;
-  for (let i = 0; i < parentDivLen; i++) {
-    if (parentDiv[i] !== null) {
-      console.log("I found some answer elements");
-      parentDiv[i].parentNode.removeChild(parentDiv[i]);
-    } else console.log("I found no answer elements");
-  }
+  let parentDiv = document.getElementById("anCont"); //gets element "anCont"
+  // If one is found...
+  if (parentDiv !== null) {
+    // it gets deleted
+    parentDiv.parentNode.removeChild(parentDiv);
+  } return
 };
