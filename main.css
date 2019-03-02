@@ -17,15 +17,27 @@ body {
   position: relative;
   animation: fadeIn 1.5s ease-out;
 }
-#intro {
+/* Use for min width */
+/* #intro {
   font-weight: normal;
   line-height: 1.5;
   color: grey;
   margin-bottom: 32px;
+} */
+#intro {
+  font-weight: normal;
+  line-height: 1.25;
+  color: grey;
+  margin-bottom: 18px;
 }
 .formWidget {
   margin: 0 8px 18px 0;
-  display: inline-block;
+  /* use for min-width */
+  /* display: inline-block; */
+}
+
+input {
+width: 100%
 }
 
 .answer {
@@ -78,4 +90,14 @@ hr {
   100% {
     opacity: 1;
   }
+}
+@media only screen and (min-width: 450px) {
+  .formWidget {
+    display: inline-block;
+  }
+
+#intro {
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
 }
