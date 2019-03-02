@@ -1,23 +1,23 @@
 body {
-  background-color: black;
   color: whitesmoke;
   font-family: sans-serif;
   height: 100%;
-
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./387352-PC49YM-201.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: black;
 }
 .container {
   margin: 5% auto 0 auto;
   width: 60%;
   position: relative;
-  animation: fadeIn 1.5s ease-out
-  
+  animation: fadeIn 1.5s ease-out;
 }
 #intro {
   font-weight: normal;
   line-height: 1.5;
   color: grey;
   margin-bottom: 32px;
-
 }
 .formWidget {
   margin: 0 8px 18px 0;
@@ -25,20 +25,19 @@ body {
 }
 
 .answer {
-  animation: fadeIn 1.5s ease-out
+  animation: fadeIn 1.5s ease-out;
 }
 
 #clickMe {
-    padding: 15px;;
-    margin: 0 0 15px 0px;
-    display: inline-block;
-    background-color: red;
-    
+  padding: 15px;
+  margin: 0 0 15px 0px;
+  display: inline-block;
+  background-color: red;
 }
 
 #clickMe:hover {
-    background-color: royalblue;
-    cursor: pointer;
+  background-color: royalblue;
+  cursor: pointer;
 }
 
 hr {
@@ -55,7 +54,7 @@ hr {
   width: 100%;
   /* position: absolute; */
   left: 0;
-  animation: lineStretch 2s ease-out
+  animation: lineStretch 2s ease-out;
 }
 
 @keyframes lineStretch {
@@ -63,7 +62,7 @@ hr {
     width: 0%;
   }
   100% {
-    width: 100%
+    width: 100%;
   }
 }
 
